@@ -1,6 +1,6 @@
-const minPlaybackTime = 0.1;
-const minVolumeThreshold = 0.005;
-const defaultVolume = 0.005;
+const MIN_PLAYBACKTIME = 0.1;
+const MIN_VOLUME_THRESHOLD = 0.005;
+const DEFAULT_VOLUME = 0.005;
 
 function findMediaTags() {
   const mediaElements = document.querySelectorAll("video, audio");
@@ -9,12 +9,13 @@ function findMediaTags() {
     if (
       !media.paused ||
       media.muted ||
-      (media.currentTime > minPlaybackTime && media.volume > minVolumeThreshold)
+      (media.currentTime > MIN_PLAYBACKTIME &&
+        media.volume > MIN_VOLUME_THRESHOLD)
     ) {
       return;
     }
 
-    media.volume = defaultVolume;
+    media.volume = DEFAULT_VOLUME;
   });
 }
 
