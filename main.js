@@ -3,10 +3,14 @@ const minVolumeThreshold = 0.005;
 const defaultVolume = 0.005;
 
 function findMediaTags() {
-  const mediaElements = document.querySelectorAll('video, audio');
+  const mediaElements = document.querySelectorAll("video, audio");
 
-  mediaElements.forEach(media => {
-    if (!media.paused || media.muted || (media.currentTime > minPlaybackTime && media.volume > minVolumeThreshold)) {
+  mediaElements.forEach((media) => {
+    if (
+      !media.paused ||
+      media.muted ||
+      (media.currentTime > minPlaybackTime && media.volume > minVolumeThreshold)
+    ) {
       return;
     }
 
@@ -16,9 +20,9 @@ function findMediaTags() {
 
 findMediaTags();
 
-const observer = new MutationObserver(mutations => {
-  mutations.forEach(mutation => {
-    if (mutation.type === 'childList') {
+const observer = new MutationObserver((mutations) => {
+  mutations.forEach((mutation) => {
+    if (mutation.type === "childList") {
       findMediaTags();
     }
   });
