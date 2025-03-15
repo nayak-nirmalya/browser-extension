@@ -24,6 +24,34 @@ git clone https://github.com/nayak-nirmalya/browser-extension.git
 - Use <kbd>b</kbd> to cycle through available audio tracks.
 - Use <kbd>f</kbd> to toggle fullscreen mode.
 
+## Note
+
+Support for HTML5 video's 'audioTracks' feature varies across browsers. To ensure it functions correctly in your preferred browser, you may need to make the following adjustments.
+
+#### Chrome
+
+- Goto `chrome://flags`
+- Enable `#enable-experimental-web-platform-features`
+- Restart browser
+
+#### MS Edge
+
+- Goto `edge://flags/`
+- Enable `#enable-experimental-web-platform-features`
+- Restart browser
+
+#### Brave
+
+- Goto `brave://flags/`
+- Enable `#enable-experimental-web-platform-features`
+- Restart browser
+
+#### Firefox
+
+- Goto `about:config`
+- Toggle `media.track.enabled` on
+- Restart browser
+
 ## Files
 
 - `main.js`: Contains the logic for finding and adjusting media elements on the page.
