@@ -1,21 +1,28 @@
 # Custom Extensions
 
-This is a browser extension that resets the audio volume of media elements on web pages.
+Extensions to Reset Audio Volume, Change Audio Track & Toggle Full-Screen.
 
 ## Description
 
-The extension automatically sets the volume of media elements (video and audio) to a default value if they are paused, muted, or have a low volume.
+The extension automatically sets the volume of media elements (video and audio) to a default value. Changes audio track & toggles fullscreen.
 
 ## Installation
 
 1. Clone this repository to your local machine.
+
+```bash
+git clone https://github.com/nayak-nirmalya/browser-extension.git
+```
+
 2. Open your browser and navigate to the extensions page (e.g., `chrome://extensions` for Chrome).
 3. Enable "Developer mode" if it is not already enabled.
 4. Click on "Load unpacked" and select the directory where you cloned this repository.
 
 ## Usage
 
-Once the extension is installed, it will automatically adjust the volume of media elements on any web page you visit.
+- Once the extension is installed, it will automatically adjust the volume of media elements on any web page you visit.
+- Use <kbd>b</kbd> to cycle through available audio tracks.
+- Use <kbd>f</kbd> to toggle fullscreen mode.
 
 ## Files
 
@@ -26,7 +33,7 @@ Once the extension is installed, it will automatically adjust the volume of medi
 
 The following constants in `main.js` can be adjusted to change the extension's behavior:
 
-- `MIN_PLAYBACKTIME`: The minimum playback time to consider a media element as active.
+- `MIN_PLAYBACK_TIME`: The minimum playback time to consider a media element as active.
 - `MIN_VOLUME_THRESHOLD`: The minimum volume threshold to consider a media element as active.
 - `DEFAULT_VOLUME`: The default volume to set for inactive media elements.
 
