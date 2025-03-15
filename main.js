@@ -31,3 +31,34 @@ const observer = new MutationObserver((mutations) => {
 const config = { childList: true, subtree: true };
 
 observer.observe(document, config);
+
+function toggleFullscreen(video) {
+  if (isFullscreen()) {
+    exitFullscreen();
+  } else {
+    requestFullscreen(video);
+  }
+}
+
+function isFullscreen() {
+  return !!(
+    document.fullscreenElement ||
+    document.webkitFullscreenElement ||
+    document.mozFullScreenElement ||
+    document.msFullscreenElement
+  );
+}
+
+function exitFullscreen() {
+  document.exitFullscreen?.() ||
+    document.webkitExitFullscreen?.() ||
+    document.mozCancelFullScreen?.() ||
+    document.msExitFullscreen?.();
+}
+
+function requestFullscreen(video) {
+  video.requestFullscreen?.() ||
+    video.webkitRequestFullscreen?.() ||
+    video.mozRequestFullScreen?.() ||
+    video.msRequestFullscreen?.();
+}
