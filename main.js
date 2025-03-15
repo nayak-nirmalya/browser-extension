@@ -32,6 +32,22 @@ const config = { childList: true, subtree: true };
 
 observer.observe(document, config);
 
+function handleKeyDown(event) {
+  const video = document.querySelector("video");
+  if (!video) return;
+
+  switch (event.key) {
+    case "b":
+      toggleAudioTrack(video);
+      break;
+    case "f":
+      toggleFullscreen(video);
+      break;
+  }
+}
+
+document.addEventListener("keydown", handleKeyDown);
+
 function toggleAudioTrack(video) {
   if (!video.audioTracks || video.audioTracks.length <= 1) return;
 
