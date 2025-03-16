@@ -36,13 +36,13 @@ Support for HTML5 video's 'audioTracks' feature varies across browsers. To ensur
 
 #### MS Edge
 
-- Goto `edge://flags/`
+- Goto `edge://flags`
 - Enable `#enable-experimental-web-platform-features`
 - Restart browser
 
 #### Brave
 
-- Goto `brave://flags/`
+- Goto `brave://flags`
 - Enable `#enable-experimental-web-platform-features`
 - Restart browser
 

@@ -47,7 +47,13 @@ function handleKeyDown(event) {
   }
 }
 
-document.addEventListener("keydown", handleKeyDown);
+function isYouTubePage() {
+  return window.location.hostname === "www.youtube.com";
+}
+
+if (!isYouTubePage()) {
+  document.addEventListener("keydown", handleKeyDown);
+}
 
 function toggleAudioTrack(video) {
   if (!video.audioTracks || video.audioTracks.length <= 1) return;
