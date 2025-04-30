@@ -21,8 +21,8 @@ git clone https://github.com/nayak-nirmalya/browser-extension.git
 ## Usage
 
 - Once the extension is installed, it will automatically adjust the volume of media elements on any web page you visit.
-- Use <kbd>b</kbd> to cycle through available audio tracks.
-- Use <kbd>f</kbd> to toggle fullscreen mode.
+- Use <kbd>b</kbd> OR <kbd>B</kbd> to cycle through available audio tracks.
+- Use <kbd>f</kbd> OR <kbd>F</kbd> to toggle fullscreen mode.
 
 ## Note
 
