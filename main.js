@@ -37,7 +37,7 @@ function handleKeyDown(event) {
   const video = document.querySelector("video");
   if (!video) return;
 
-  switch (event.key) {
+  switch (event.key.toLowerCase()) {
     case "b":
       toggleAudioTrack(video);
       break;
